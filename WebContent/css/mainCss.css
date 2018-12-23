@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+* {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.btn-style
+        {
+          float:right;margin-top:-19px; 
+          color:gray;
+        }
+/* 父容器加上text-align，使子元素居中显示，比较美观 */
+#menu {
+	text-align: center;
+	margin-top: 20px;
+}
+/* 对第一层ul进行控制 */
+#menu>ul {
+	display: inline-block; /* 将display属性变为行内块级元素，使得其能够居中显示，否则默认会充满整个屏幕 */
+	width: auto;
+}
+
+/* 设置第一层列表横排显示 */
+#menu>ul>li {
+	float: left;
+	margin-right: 1px;
+}
+
+/* 将子列表隐藏，并加上absolute，方便其子li进行相对定位 */
+#menu>ul ul {
+	position: absolute;
+	display: none;
+}
+
+/* 对li样式进行通用设置，使得更美观 */
+ul li {
+	width: 115px;
+	background: #2196F3;
+	color: #fff;
+	position: relative;
+	width: 115px;
+	line-height: 35px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 3px #80 7e7ec2;
+	cursor: pointer;
+	margin-top: 1px;
+}
+
+/* 对第三层子列表位置进行控制，使得在父列表右边显示 */
+#menu>ul>li>ul {
+	left: 116px;
+	top: -1px;
+}
